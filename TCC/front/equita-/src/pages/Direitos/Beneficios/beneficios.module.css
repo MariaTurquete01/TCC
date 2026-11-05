@@ -1,0 +1,334 @@
+.BenefitsPage {
+    padding: 80px 10%;
+    background: var(--color-background);
+    color: var(--color-text);
+}
+
+.BenefitsPage .Badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid #e7d7cb;
+    border-radius: var(--radius-control);
+    background: var(--color-surface-soft);
+    color: var(--color-accent-strong);
+    font-size: 12px;
+}
+
+.BenefitsPage h1,
+.BenefitsPage h2,
+.BenefitsPage h3 {
+    color: var(--color-text);
+}
+
+.BenefitsPage p,
+.BenefitsPage li {
+    color: var(--color-text-muted);
+}
+
+.BenefitsPage .ContentCard,
+.BenefitsPage .ActionsSection {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.BenefitsPage .Item,
+.BenefitsPage .Phone,
+.BenefitsPage .ActionCard {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    background: var(--color-surface-soft);
+}
+
+.BenefitsPage .Phone h3,
+.BenefitsPage a {
+    color: var(--color-accent-strong);
+}
+
+.BenefitsPage .ActionCard:hover {
+    background: var(--color-accent);
+    color: var(--color-surface);
+    transform: none;
+}
+
+.BenefitsPage .InfoBox {
+    border-left-color: var(--color-accent);
+    border-radius: var(--radius-control);
+}
+
+.BenefitsPage :focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .BenefitsPage .ContentCard,
+    .BenefitsPage .ActionsSection {
+        padding: 22px 18px;
+    }
+}
+
+.BenefitsHero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.Badge {
+    background: #dbeafe;
+    color: #2563eb;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+}
+
+.BenefitsHero h1 {
+    margin-top: 20px;
+    font-size: 3rem;
+    color: #111827;
+}
+
+.BenefitsHero p {
+    margin-top: 15px;
+    color: #6b7280;
+}
+
+.ContentCard {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+}
+
+.ContentCard h2 {
+    margin-bottom: 20px;
+    color: #2563eb;
+}
+
+.ContentCard p {
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.ContentCard ul,
+.ContentCard ol {
+    padding-left: 20px;
+}
+
+.ContentCard li {
+    margin-bottom: 10px;
+    color: #4b5563;
+}
+
+.Grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+.Item {
+    background: #f8fafc;
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+.Item h3 {
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.Item p {
+    color: #6b7280;
+}
+
+.Phones {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+.Phone {
+    text-align: center;
+
+    background: #eff6ff;
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+.Phone h3 {
+    color: #2563eb;
+    font-size: 2rem;
+}
+
+.Phone p {
+    color: #6b7280;
+}
+
+.ActionsSection {
+    margin-top: 50px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+
+    text-align: center;
+}
+
+.ActionsSection h2 {
+    margin-bottom: 30px;
+
+    color: #2563eb;
+}
+
+.ActionsGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+.ActionCard {
+    background: #eff6ff;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    color: #2563eb;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.ActionCard:hover {
+    transform: translateY(-5px);
+
+    background: #dbeafe;
+}
+
+@media (max-width: 768px) {
+
+    .BenefitsHero h1 {
+        font-size: 2.2rem;
+    }
+
+    .BenefitsPage {
+        padding: 60px 5%;
+    }
+
+}
+
+.ReferenceCategory {
+    margin-top: 32px;
+}
+
+.ReferenceCategory h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #1f2937;
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+}
+
+.ReferenceItem {
+    padding: 18px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ReferenceItem:last-child {
+    border-bottom: none;
+}
+
+.ReferenceItem h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.ReferenceItem p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+.ReferenceItem a {
+    display: inline-block;
+    font-size: 14px;
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.ReferenceItem a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.InfoBox {
+    margin-top: 30px;
+    padding: 16px 18px;
+    border-left: 5px solid #f59e0b;
+    background: #fffbeb;
+    border-radius: 6px;
+}
+
+.InfoBox h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #92400e;
+}
+
+.InfoBox p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #78350f;
+}
+
+@media (max-width: 768px) {
+
+    .ReferenceCategory h3 {
+        font-size: 16px;
+    }
+
+    .ReferenceItem h4 {
+        font-size: 15px;
+    }
+
+    .ReferenceItem p {
+        font-size: 14px;
+    }
+
+}
+
+.BenefitsPage .ContentCard .Grid {
+    margin-top: 20px;
+}

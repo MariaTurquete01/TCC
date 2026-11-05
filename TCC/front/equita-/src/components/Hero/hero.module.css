@@ -1,0 +1,314 @@
+/* ===================================
+   HERO
+=================================== */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ffffff
+        );
+}
+
+
+/* ===================================
+   CONTEÚDO
+=================================== */
+
+.heroContent {
+    max-width: 900px;
+}
+
+
+/* ===================================
+   BADGE
+=================================== */
+
+.badge {
+    display: inline-block;
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    margin-bottom: 25px;
+
+    font-weight: 600;
+}
+
+
+/* ===================================
+   TÍTULO
+=================================== */
+
+.hero h1 {
+    font-size: 4rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+    color: #111827;
+}
+
+
+/* ===================================
+   TEXTO
+=================================== */
+
+.hero p {
+    font-size: 1.2rem;
+
+    color: #6b7280;
+
+    margin-bottom: 35px;
+}
+
+
+/* ===================================
+   BOTÕES
+=================================== */
+
+.heroButtons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* ===================================
+   BOTÃO PRINCIPAL
+=================================== */
+
+.primaryBtn {
+    display: inline-block;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primaryBtn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ===================================
+   BOTÃO SECUNDÁRIO
+=================================== */
+
+.secondaryBtn {
+    display: inline-block;
+
+    background: white;
+
+    color: #2563eb;
+
+    border: 2px solid #2563eb;
+
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.secondaryBtn:hover {
+    background: #eff6ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.hero {
+    min-height: min(78vh, 760px);
+    padding: 72px 24px;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(190, 112, 83, 0.12), transparent 52%),
+        linear-gradient(145deg, #fbf8f1 0%, #f4ece2 100%);
+    color: #33231e;
+}
+
+.heroContent {
+    width: min(100%, 900px);
+}
+
+.brand {
+    display: block;
+    margin-bottom: 16px;
+    color: #a64e38;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.badge {
+    margin-bottom: 22px;
+    padding: 8px 13px;
+    border: 1px solid #e6d4c7;
+    border-radius: 4px;
+    background: rgba(255, 252, 247, 0.78);
+    color: #765447;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    max-width: 860px;
+    margin: 0 auto 22px;
+    color: #33231e;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    color: #65564e;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.heroButtons {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    max-width: 225px;
+    flex: 1 1 170px;
+    box-sizing: border-box;
+    padding: 12px 18px;
+    border: 1px solid #ad5941;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.primaryBtn {
+    background: #ad5941;
+    color: #fffaf5;
+}
+
+.primaryBtn:hover {
+    background: #914632;
+    transform: translateY(-1px);
+}
+
+.secondaryBtn {
+    background: rgba(255, 252, 247, 0.75);
+    color: #914632;
+}
+
+.secondaryBtn:hover {
+    background: #f1e1d6;
+    transform: translateY(-1px);
+}
+
+.hero a:focus-visible {
+    outline: 3px solid #c77a5f;
+    outline-offset: 3px;
+}
+
+@media (max-width: 620px) {
+    .hero {
+        min-height: auto;
+        padding: 64px 22px;
+    }
+
+    .brand {
+        font-size: 34px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        width: 100%;
+        max-width: 360px;
+        flex: 0 1 auto;
+    }
+}

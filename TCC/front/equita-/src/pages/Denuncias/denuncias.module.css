@@ -1,0 +1,490 @@
+
+/* ===================================
+   DENÚNCIAS
+=================================== */
+
+.denunciaPage {
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+
+/* ===================================
+   HERO
+=================================== */
+
+.denunciaHero {
+    background: white;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.heroBadge {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #e0f2fe;
+    color: #0369a1;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.denunciaHero h1 {
+    color: #0F4C81;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.denunciaHero p {
+    max-width: 700px;
+    margin: auto;
+    color: #64748b;
+    line-height: 1.8;
+}
+
+
+/* ===================================
+   FORMULÁRIO
+=================================== */
+
+.formSection {
+    padding: 70px 8%;
+}
+
+.denunciaForm {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+}
+
+.denunciaForm h2 {
+    color: #0F4C81;
+    margin-bottom: 35px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.inputGroup label {
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: .3s;
+    resize: vertical;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+    outline: none;
+    border-color: #0F4C81;
+    box-shadow: 0 0 0 3px rgba(15, 76, 129, .15);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* ===================================
+   CHECKBOX
+=================================== */
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 25px 0 35px;
+}
+
+.checkbox input {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.checkbox label {
+    color: #475569;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+
+/* ===================================
+   BOTÃO
+=================================== */
+
+.submitButton {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #0F4C81;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submitButton:hover {
+    background: #1565a8;
+    transform: translateY(-2px);
+}
+
+
+/* ===================================
+   PROTOCOLO
+=================================== */
+
+.protocolSection {
+    padding: 0 8% 70px;
+}
+
+.protocolCard {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+    text-align: center;
+}
+
+.protocolCard h2 {
+    color: #0F4C81;
+    margin-bottom: 20px;
+}
+
+.protocolCard p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.protocol {
+    margin: 30px auto;
+    padding: 18px;
+    max-width: 320px;
+    background: #e0f2fe;
+    border: 2px dashed #0F4C81;
+    border-radius: 14px;
+    color: #0F4C81;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 768px) {
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .denunciaForm,
+    .protocolCard {
+        padding: 30px 25px;
+    }
+
+    .denunciaHero {
+        padding: 50px 6%;
+    }
+
+    .formSection,
+    .protocolSection {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .denunciaHero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .denunciaHero h1 {
+        font-size: 1.8rem;
+    }
+
+    .submitButton {
+        padding: 15px;
+    }
+
+}
+
+.denunciaPage {
+    background: #fbf8f1;
+    color: #33231e;
+}
+
+.denunciaHero {
+    padding: 64px 24px 34px;
+    background: #fbf8f1;
+}
+
+.heroBadge {
+    margin-bottom: 16px;
+    border: 1px solid #e7d7cb;
+    border-radius: 4px;
+    background: #f4e9df;
+    color: #8f4b37;
+    font-size: 13px;
+}
+
+.denunciaHero h1 {
+    margin: 0 0 14px;
+    color: #33231e;
+    font-size: 38px;
+}
+
+.denunciaHero p {
+    color: #65564e;
+    line-height: 1.65;
+}
+
+.formSection {
+    padding: 24px 24px 42px;
+}
+
+.denunciaForm {
+    max-width: 760px;
+    padding: 34px;
+    border: 1px solid #eee4da;
+    border-radius: 8px;
+    background: #fffdf9;
+    box-shadow: 0 8px 24px rgba(53, 35, 28, 0.06);
+}
+
+.denunciaForm h2,
+.protocolCard h2 {
+    color: #33231e;
+}
+
+.denunciaForm h2 {
+    margin: 0 0 26px;
+    font-size: 21px;
+}
+
+.formNotice {
+    margin: -10px 0 24px;
+    padding: 12px 14px;
+    border-left: 3px solid #ad5941;
+    background: #f7eee8;
+    color: #65564e;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.attachmentList {
+    display: grid;
+    gap: 6px;
+    margin: 9px 0 0;
+    padding-left: 20px;
+    color: #65564e;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.inputGroup label,
+.identificationFieldset legend {
+    color: #493b35;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.inputGroup label span,
+.identificationFieldset legend span {
+    color: #a64e38;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    min-height: 46px;
+    padding: 11px 13px;
+    border: 1px solid #d8cbc0;
+    border-radius: 5px;
+    background: #fff;
+    color: #33231e;
+    font-size: 15px;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+    border-color: #ad5941;
+    box-shadow: 0 0 0 3px rgba(173, 89, 65, 0.15);
+}
+
+.row {
+    gap: 18px;
+}
+
+.identificationFieldset {
+    min-width: 0;
+    margin: 4px 0 22px;
+    padding: 0;
+    border: 0;
+}
+
+.identificationFieldset legend {
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.identificationOptions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.identificationOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 1px solid #dfd1c6;
+    border-radius: 5px;
+    background: #fbf8f1;
+    color: #493b35;
+    cursor: pointer;
+}
+
+.identificationOption:has(input:checked) {
+    border-color: #ad5941;
+    background: #f7eee8;
+}
+
+.identificationOption input {
+    accent-color: #ad5941;
+}
+
+.errorMessage {
+    margin: 0 0 16px;
+    color: #8b2f24;
+    font-size: 14px;
+}
+
+.submitButton {
+    min-height: 48px;
+    padding: 12px 18px;
+    border-radius: 5px;
+    background: #ad5941;
+    font-size: 15px;
+}
+
+.submitButton:hover {
+    background: #914632;
+    transform: translateY(-1px);
+}
+
+.protocolSection {
+    padding: 0 24px 60px;
+}
+
+.protocolCard {
+    max-width: 760px;
+    padding: 28px 32px;
+    border: 1px solid #eee4da;
+    border-radius: 8px;
+    background: #fffdf9;
+    box-shadow: 0 8px 24px rgba(53, 35, 28, 0.05);
+}
+
+.protocolCard p {
+    color: #65564e;
+}
+
+.protocol {
+    margin: 20px auto;
+    border: 1px dashed #ad5941;
+    border-radius: 5px;
+    background: #f7eee8;
+    color: #914632;
+    font-size: 17px;
+    letter-spacing: 0;
+}
+
+.protocolLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 16px;
+    border: 1px solid #ad5941;
+    border-radius: 5px;
+    background: #ad5941;
+    color: #fffaf5;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.protocolLink:hover {
+    background: #914632;
+}
+
+.denunciaPage :focus-visible {
+    outline: 3px solid #c77a5f;
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .denunciaHero {
+        padding: 48px 20px 24px;
+    }
+
+    .denunciaHero h1 {
+        font-size: 30px;
+    }
+
+    .formSection,
+    .protocolSection {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .denunciaForm,
+    .protocolCard {
+        padding: 24px 20px;
+    }
+
+    .row,
+    .identificationOptions {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .identificationOptions {
+        gap: 10px;
+    }
+}

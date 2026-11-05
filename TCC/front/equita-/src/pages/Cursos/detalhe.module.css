@@ -1,0 +1,513 @@
+/* ===========================
+   PÁGINA DO CURSO
+=========================== */
+
+.coursePage {
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.courseHero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 80px 10%;
+  background: white;
+}
+
+.courseHero img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.courseHeroContent h1 {
+  font-size: 2.8rem;
+  color: #0f4c81;
+  margin: 20px 0;
+}
+
+.courseHeroContent p {
+  color: #64748b;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.courseCategory {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.courseMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.courseMeta span {
+  background: #f1f5f9;
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+
+/* ===========================
+   SEÇÕES
+=========================== */
+
+.progressSection,
+.lessonsSection,
+.materialsSection,
+.quizSection,
+.certificateSection,
+.courseActions {
+  padding: 70px 10%;
+}
+
+.progressSection h2,
+.lessonsSection h2,
+.materialsSection h2,
+.quizSection h2,
+.certificateSection h2 {
+  color: #0f4c81;
+  margin-bottom: 25px;
+}
+
+.certificateDocument {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  max-width: 760px;
+  margin-bottom: 20px;
+  padding: 34px;
+  border: 3px double #ad5941;
+  background: #fffdf9;
+  color: #33231e;
+  text-align: center;
+}
+
+.certificateDocument span {
+  color: #914632;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.certificateDocument h3 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.certificateDocument p,
+.certificateDocument strong {
+  margin: 0;
+  color: #493b35;
+}
+
+.certificateDocument strong {
+  font-size: 20px;
+}
+
+.certificateDocument small {
+  color: #76685f;
+  line-height: 1.5;
+}
+
+/* ===========================
+   PROGRESSO
+=========================== */
+
+.progressBar {
+  width: 100%;
+  height: 18px;
+  background: #dbeafe;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progressFill {
+  height: 100%;
+  width: 0%;
+  background: #0f4c81;
+  transition: 0.4s;
+}
+
+/* ===========================
+   AULAS
+=========================== */
+
+.moduleCard {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.moduleCard h3 {
+  color: #0f4c81;
+  margin-bottom: 20px;
+}
+
+.lessonCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lessonCard:hover {
+  background: #eff6ff;
+  border-color: #0f4c81;
+  transform: translateX(5px);
+}
+
+.lessonCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.lessonCard button {
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid #0f4c81;
+  border-radius: 5px;
+  background: #fff;
+  color: #0f4c81;
+  font: inherit;
+  cursor: pointer;
+}
+
+.lessonCard button:hover {
+  background: #eff6ff;
+}
+
+.lessonCompleted {
+  border-color: #4d8061;
+  background: #edf6ef;
+}
+
+.lessonCompleted button {
+  border-color: #4d8061;
+  color: #356744;
+}
+
+.lessonContent {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+}
+
+.lessonContent p {
+  margin: 0;
+  color: #65564e;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.lessonContent a {
+  width: fit-content;
+  color: #914632;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.lessonNotice {
+  color: #65564e;
+  line-height: 1.55;
+}
+
+.enrollmentPrompt {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  color: #65564e;
+}
+
+.enrollmentPrompt p,
+.enrollmentPrompt small {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.enrollButton {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid #914632;
+  border-radius: 5px;
+  background: #ad5941;
+  color: #fffaf5;
+  font: inherit;
+  font-weight: 600;
+}
+
+.enrollButton:hover {
+  background: #914632;
+}
+
+/* ===========================
+   MATERIAIS
+=========================== */
+
+.materialCard {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.materialCard:hover {
+  transform: translateY(-4px);
+  background: #eff6ff;
+}
+
+/* ===========================
+   QUESTIONÁRIO
+=========================== */
+
+.quizSection p,
+.certificateSection p {
+  color: #64748b;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.quizButton,
+.certificateButton,
+.backButton {
+  display: inline-block;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quizButton {
+  background: #0f4c81;
+  color: white;
+}
+
+.quizButton:hover {
+  background: #1565a8;
+}
+
+.certificateButton {
+  background: #16a34a;
+  color: white;
+}
+
+.certificateButton:hover {
+  background: #15803d;
+}
+
+.backButton {
+  background: #e2e8f0;
+  color: #0f4c81;
+}
+
+.backButton:hover {
+  background: #cbd5e1;
+}
+
+/* ===========================
+   CURSO NÃO ENCONTRADO
+=========================== */
+
+.courseNotFound {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+}
+
+.courseNotFound h1 {
+  color: #0f4c81;
+}
+
+.courseNotFound a {
+  text-decoration: none;
+  background: #0f4c81;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 12px;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media (max-width: 992px) {
+  .courseHero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .courseMeta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .courseHero,
+  .progressSection,
+  .lessonsSection,
+  .materialsSection,
+  .quizSection,
+  .certificateSection,
+  .courseActions {
+    padding: 60px 7%;
+  }
+
+  .courseHeroContent h1 {
+    font-size: 2rem;
+  }
+}
+
+.courseHero {
+  grid-template-columns: minmax(0, 1fr);
+  background: #fbf8f1;
+}
+
+.courseHeroContent {
+  width: min(100%, 850px);
+  margin: 0 auto;
+}
+
+@page {
+  size: A4 landscape;
+  margin: 12mm;
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #certificado,
+  #certificado * {
+    visibility: visible !important;
+  }
+
+  #certificado {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 18mm;
+    background: #fff;
+  }
+
+  #certificado > h2,
+  #certificado > p,
+  #certificado .printButton {
+    display: none !important;
+  }
+
+  .certificateDocument {
+    width: 100%;
+    max-width: none;
+    min-height: 150mm;
+    align-content: center;
+    box-sizing: border-box;
+    border-width: 4px;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+@media (max-width: 480px) {
+  .lessonCard {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .courseHeroContent h1 {
+    font-size: 1.7rem;
+  }
+
+  .courseMeta {
+    flex-direction: column;
+  }
+
+  .quizButton,
+  .certificateButton,
+  .backButton {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.courseCard,
+.materialCard,
+.moduleCard,
+.lessonCard,
+.faqCard {
+  transition: all 0.3s ease;
+}
+
+.courseCard:hover,
+.materialCard:hover,
+.moduleCard:hover {
+  box-shadow: 0 18px 35px rgba(15, 76, 129, 0.12);
+}
+
+/* ===========================
+   ACESSIBILIDADE
+=========================== */
+
+button:focus,
+a:focus,
+input:focus {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+/* ===========================
+   IMAGEM PADRÃO
+=========================== */
+
+.courseHero img {
+  background: #e2e8f0;
+}
+
+/* ===========================
+   ESPAÇAMENTO FINAL
+=========================== */
+
+.courseActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}

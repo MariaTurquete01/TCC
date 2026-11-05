@@ -1,0 +1,67 @@
+:root {
+	color-scheme: light;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	--color-background: #fbf8f1;
+	--color-surface: #fffdf9;
+	--color-surface-soft: #f7eee8;
+	--color-text: #33231e;
+	--color-text-muted: #65564e;
+	--color-accent: #ad5941;
+	--color-accent-strong: #914632;
+	--color-border: #eee4da;
+	--color-focus: #c77a5f;
+	--color-footer: #241b18;
+	--radius-control: 5px;
+	--radius-card: 8px;
+	--shadow-soft: 0 6px 18px rgba(53, 35, 28, 0.06);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	min-height: 100%;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: "Aptos", "Segoe UI", system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: Georgia, "Times New Roman", serif;
+	letter-spacing: 0;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+	transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+a {
+	color: inherit;
+}
+
+:focus-visible {
+	outline: 3px solid var(--color-focus);
+	outline-offset: 3px;
+}
+ 

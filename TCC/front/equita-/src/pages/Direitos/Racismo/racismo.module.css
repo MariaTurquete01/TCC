@@ -1,0 +1,302 @@
+.racismoPage {
+  padding: 80px 10%;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.racismoPage .badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid #e7d7cb;
+  border-radius: var(--radius-control);
+  background: var(--color-surface-soft);
+  color: var(--color-accent-strong);
+  font-size: 12px;
+}
+
+.racismoPage h1,
+.racismoPage h2,
+.racismoPage h3,
+.racismoPage h4 {
+  color: var(--color-text);
+}
+
+.racismoPage p,
+.racismoPage li {
+  color: var(--color-text-muted);
+}
+
+.racismoPage .contentCard,
+.racismoPage .actionsSection {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.racismoPage .item,
+.racismoPage .phone,
+.racismoPage .referenceItem,
+.racismoPage .actionCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-soft);
+}
+
+.racismoPage .phone h3,
+.racismoPage a {
+  color: var(--color-accent-strong);
+}
+
+.racismoPage .infoBox {
+  border-left-color: var(--color-accent);
+  border-radius: var(--radius-control);
+}
+
+.racismoPage .actionCard:hover {
+  background: var(--color-accent);
+  color: var(--color-surface);
+  transform: none;
+}
+
+.racismoPage :focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .racismoPage .contentCard,
+  .racismoPage .actionsSection {
+    padding: 22px 18px;
+  }
+}
+
+.racismoHero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.badge {
+  background: #dbeafe;
+  color: #2563eb;
+
+  padding: 10px 18px;
+
+  border-radius: 30px;
+
+  font-weight: 600;
+}
+
+.racismoHero h1 {
+  margin-top: 20px;
+  font-size: 3rem;
+  color: #111827;
+}
+
+.racismoHero p {
+  margin-top: 15px;
+  color: #6b7280;
+}
+
+.contentCard {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  margin-bottom: 30px;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contentCard h2 {
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+.contentCard p {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.contentCard ul,
+.contentCard ol {
+  padding-left: 20px;
+}
+
+.contentCard li {
+  margin-bottom: 10px;
+  color: #4b5563;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+.item {
+  background: #f8fafc;
+
+  padding: 20px;
+
+  border-radius: 15px;
+}
+
+.item h3 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.item p {
+  color: #6b7280;
+}
+
+.phones {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 20px;
+}
+
+.phone {
+  text-align: center;
+
+  background: #eff6ff;
+
+  padding: 20px;
+
+  border-radius: 15px;
+}
+
+.phone h3 {
+  color: #2563eb;
+  font-size: 2rem;
+}
+
+.phone p {
+  color: #6b7280;
+}
+
+.referenceCategory {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+.referenceItem {
+  background: #f8fafc;
+
+  padding: 20px;
+
+  border-radius: 15px;
+}
+
+.referenceItem h4 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.referenceItem a {
+  color: #2563eb;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.referenceItem a:hover {
+  text-decoration: underline;
+}
+
+.infoBox {
+  margin-top: 25px;
+
+  background: #eff6ff;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  border-left: 4px solid #2563eb;
+}
+
+.infoBox h3 {
+  margin-bottom: 10px;
+
+  color: #2563eb;
+}
+
+.infoBox p {
+  color: #4b5563;
+}
+
+.actionsSection {
+  margin-top: 50px;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+}
+
+.actionsSection h2 {
+  margin-bottom: 30px;
+
+  color: #2563eb;
+}
+
+.actionsGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+.actionCard {
+  background: #eff6ff;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  text-decoration: none;
+
+  color: #2563eb;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.actionCard:hover {
+  transform: translateY(-5px);
+
+  background: #dbeafe;
+}
+
+@media (max-width: 768px) {
+  .racismoHero h1 {
+    font-size: 2.2rem;
+  }
+
+  .racismoPage {
+    padding: 60px 5%;
+  }
+}

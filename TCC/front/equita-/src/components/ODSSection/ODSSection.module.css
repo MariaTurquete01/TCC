@@ -1,0 +1,205 @@
+/* ===================================
+   ODS
+=================================== */
+
+.ods {
+    padding: 100px 10%;
+    background: #f8fafc;
+    box-sizing: border-box;
+}
+
+/* ===================================
+   CONTEÚDO
+=================================== */
+
+.odsContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===================================
+   TEXTO
+=================================== */
+
+.odsText {
+    flex: 1;
+}
+
+.odsBadge {
+    display: inline-block;
+
+    background: #dbeafe;
+    color: #2563eb;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+}
+
+.odsText h2 {
+    margin-top: 20px;
+
+    font-size: 2.5rem;
+
+    color: #111827;
+}
+
+.odsText h3 {
+    margin-top: 15px;
+
+    color: #2563eb;
+}
+
+.odsText p {
+    margin-top: 20px;
+
+    line-height: 1.8;
+
+    color: #6b7280;
+}
+
+.odsText ul {
+    margin-top: 25px;
+    padding: 0;
+}
+
+.odsText li {
+    margin-bottom: 12px;
+
+    list-style: none;
+
+    color: #374151;
+}
+
+/* ===================================
+   CARD ODS
+=================================== */
+
+.odsCard {
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+
+    background: #2563eb;
+
+    border-radius: 30px;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+}
+
+.odsNumber {
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.odsCard h3 {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 900px) {
+    .ods {
+        padding: 70px 6%;
+    }
+
+    .odsContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .odsText {
+        width: 100%;
+    }
+
+    .odsText ul {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .odsCard {
+        width: 280px;
+        min-width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ods {
+        padding: 50px 5%;
+    }
+
+    .odsText h2 {
+        font-size: 2rem;
+    }
+
+    .odsText h3 {
+        font-size: 1.1rem;
+    }
+
+    .odsCard {
+        width: 240px;
+        min-width: 240px;
+        height: 240px;
+    }
+
+    .odsNumber {
+        font-size: 5rem;
+    }
+}
+
+.ods {
+    background: var(--color-background);
+}
+
+.odsBadge {
+    padding: 6px 10px;
+    border: 1px solid #e7d7cb;
+    border-radius: var(--radius-control);
+    background: var(--color-surface-soft);
+    color: var(--color-accent-strong);
+    font-size: 12px;
+}
+
+.odsText h2,
+.odsText h3 {
+    color: var(--color-text);
+}
+
+.odsText p,
+.odsText li {
+    color: var(--color-text-muted);
+}
+
+.odsCard {
+    border-radius: var(--radius-card);
+    background: var(--color-accent);
+    box-shadow: 0 12px 26px rgba(53, 35, 28, 0.14);
+}
+
+ 

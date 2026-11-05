@@ -1,0 +1,221 @@
+/* ===================================
+   COMO FUNCIONA
+=================================== */
+
+.howItWorks {
+    width: 100%;
+    padding: 100px 10%;
+    box-sizing: border-box;
+}
+
+/* ===================================
+   CABEÇALHO
+=================================== */
+
+.sectionHeader {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.sectionBadge {
+    display: inline-block;
+
+    background: #dbeafe;
+    color: #2563eb;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.sectionHeader h2 {
+    margin-top: 20px;
+
+    font-size: 2.8rem;
+    line-height: 1.2;
+
+    color: #111827;
+}
+
+.sectionHeader p {
+    margin-top: 15px;
+
+    color: #6b7280;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ===================================
+   ETAPAS
+=================================== */
+
+.steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===================================
+   CARD
+=================================== */
+
+.step {
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ===================================
+   NÚMERO
+=================================== */
+
+.stepNumber {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+}
+
+/* ===================================
+   TEXTOS
+=================================== */
+
+.step h3 {
+    margin: 0 0 15px;
+
+    color: #111827;
+
+    font-size: 1.2rem;
+}
+
+.step p {
+    margin: 0;
+
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 768px) {
+    .howItWorks {
+        padding: 70px 6%;
+    }
+
+    .sectionHeader {
+        margin-bottom: 40px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 2.2rem;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .howItWorks {
+        padding: 50px 5%;
+    }
+
+    .sectionHeader h2 {
+        font-size: 1.8rem;
+    }
+
+    .sectionHeader p {
+        font-size: 0.95rem;
+    }
+
+    .step {
+        padding: 25px 20px;
+    }
+
+    .stepNumber {
+        width: 55px;
+        height: 55px;
+
+        font-size: 1.3rem;
+    }
+}
+
+.howItWorks {
+    background: #f4ece2;
+}
+
+.sectionBadge {
+    padding: 6px 10px;
+    border: 1px solid #e7d7cb;
+    border-radius: var(--radius-control);
+    background: var(--color-surface-soft);
+    color: var(--color-accent-strong);
+    font-size: 12px;
+}
+
+.sectionHeader h2,
+.step h3 {
+    color: var(--color-text);
+}
+
+.sectionHeader p,
+.step p {
+    color: var(--color-text-muted);
+}
+
+.step {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.stepNumber {
+    border-radius: var(--radius-card);
+    background: var(--color-accent);
+}

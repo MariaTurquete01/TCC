@@ -1,0 +1,139 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-10-16T12:12:43.193-03:00  INFO 7348 --- [equita_api] [           main] br.itb.projeto.equita.Startup            : Starting Startup v0.0.1-SNAPSHOT using Java 21.0.8 with PID 7348 (Z:\WORKSPACE_2X\equita_api\target\equita_api-0.0.1-SNAPSHOT.jar started by rm99430 in Z:\WORKSPACE_2X\equita_api)
+2026-10-16T12:12:43.261-03:00  INFO 7348 --- [equita_api] [           main] br.itb.projeto.equita.Startup            : No active profile set, falling back to 1 default profile: "default"
+2026-10-16T12:12:44.846-03:00  INFO 7348 --- [equita_api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-16T12:12:44.986-03:00  INFO 7348 --- [equita_api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 13 JPA repository interfaces.
+2026-10-16T12:12:46.280-03:00  INFO 7348 --- [equita_api] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-16T12:12:46.308-03:00  INFO 7348 --- [equita_api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-16T12:12:46.310-03:00  INFO 7348 --- [equita_api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-10-16T12:12:46.366-03:00  INFO 7348 --- [equita_api] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2923 ms
+2026-10-16T12:12:47.014-03:00  INFO 7348 --- [equita_api] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-16T12:12:47.231-03:00  INFO 7348 --- [equita_api] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-10-16T12:12:48.804-03:00  INFO 7348 --- [equita_api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-16T12:12:48.891-03:00  INFO 7348 --- [equita_api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-16T12:12:49.901-03:00  INFO 7348 --- [equita_api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: bc0adbda-6c38-4b27-99ce-6396d5bc46f5
+2026-10-16T12:12:49.907-03:00  INFO 7348 --- [equita_api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-16T12:12:50.301-03:00  INFO 7348 --- [equita_api] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;concatNullYieldsNull=ON;quotedIdentifier=ON;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;vectorTypeSupport=v1;cacheBulkCopyMetadata=false;bulkCopyForBatchInsertAllowEncryptedValueModifications=false;bulkCopyForBatchInsertTableLock=false;bulkCopyForBatchInsertKeepNulls=false;bulkCopyForBatchInsertKeepIdentity=false;bulkCopyForBatchInsertFireTriggers=false;bulkCopyForBatchInsertCheckConstraints=false;bulkCopyForBatchInsertBatchSize=0;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=bd_equita_2x;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 13.2 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: bd_equita_2x/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-16T12:12:52.433-03:00  INFO 7348 --- [equita_api] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-16T12:12:52.445-03:00  INFO 7348 --- [equita_api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T12:12:52.638-03:00  INFO 7348 --- [equita_api] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-16T12:12:53.926-03:00  WARN 7348 --- [equita_api] [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6cd0f084-b385-43a7-9281-ba6836c483d5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-16T12:12:53.942-03:00  INFO 7348 --- [equita_api] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-16T12:12:55.319-03:00  INFO 7348 --- [equita_api] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-16T12:12:55.339-03:00  INFO 7348 --- [equita_api] [           main] br.itb.projeto.equita.Startup            : Started Startup in 13.087 seconds (process running for 17.638)
+2026-10-16T12:13:06.957-03:00  INFO 7348 --- [equita_api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-16T12:13:06.958-03:00  INFO 7348 --- [equita_api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-16T12:13:06.962-03:00  INFO 7348 --- [equita_api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-16T12:13:07.297-03:00 DEBUG 7348 --- [equita_api] [nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.dataAtualizacao,
+        u1_0.dataCadastro,
+        u1_0.nivelAcesso,
+        u1_0.nome,
+        u1_0.password,
+        u1_0.statusUsuario,
+        u1_0.username 
+    from
+        Usuario u1_0
+2026-10-16T12:13:08.154-03:00 DEBUG 7348 --- [equita_api] [nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cargaHoraria,
+        c1_0.dataAtualizacao,
+        c1_0.dataCadastro,
+        c1_0.descricao,
+        c1_0.publicado,
+        c1_0.statusAprovacao,
+        c1_0.titulo,
+        c1_0.voluntarioId 
+    from
+        Cursos c1_0
+2026-10-16T12:13:08.759-03:00 DEBUG 7348 --- [equita_api] [nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        d1_0.id,
+        d1_0.ativo,
+        d1_0.cidadeOcorrencia,
+        d1_0.dataOcorrencia,
+        d1_0.dataRegistro,
+        d1_0.denunciaAnonima,
+        d1_0.descricao,
+        d1_0.estadoOcorrencia,
+        d1_0.instituicaoResponsavelId,
+        d1_0.localOcorrencia,
+        d1_0.protocolo,
+        d1_0.status,
+        d1_0.tipoDenuncia,
+        d1_0.usuarioId 
+    from
+        Denuncias d1_0
+2026-10-16T12:13:09.347-03:00 DEBUG 7348 --- [equita_api] [nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.ativa,
+        i1_0.categoriaInstituicaoId,
+        i1_0.cep,
+        i1_0.cidade,
+        i1_0.dataAtualizacao,
+        i1_0.dataCadastro,
+        i1_0.descricao,
+        i1_0.email,
+        i1_0.endereco,
+        i1_0.estado,
+        i1_0.horarioFuncionamento,
+        i1_0.latitude,
+        i1_0.longitude,
+        i1_0.nome,
+        i1_0.telefone 
+    from
+        Instituicoes i1_0
+2026-10-16T12:13:14.506-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-10-16T12:13:15.095-03:00 DEBUG 7348 --- [equita_api] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        sv1_0.id,
+        sv1_0.administradorId,
+        sv1_0.ativo,
+        sv1_0.dataAnalise,
+        sv1_0.dataSolicitacao,
+        sv1_0.justificativa,
+        sv1_0.observacaoAdministrador,
+        sv1_0.status,
+        sv1_0.usuarioId 
+    from
+        SolicitacoesVoluntario sv1_0
+2026-10-16T12:13:23.722-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-10-16T12:13:38.948-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-10-16T12:14:16.718-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "login"]
+2026-10-16T12:14:19.087-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "login"]
+2026-10-16T12:14:50.868-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "login"]
+2026-10-16T12:15:19.077-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "login"]
+2026-10-16T12:15:51.749-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "login"]
+2026-10-16T12:15:53.154-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "login"]
+2026-10-16T12:17:06.433-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "login"]
+2026-10-16T12:18:31.031-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "al"]
+2026-10-16T12:18:32.380-03:00  WARN 7348 --- [equita_api] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "al"]

@@ -1,0 +1,624 @@
+/* ===================================
+   PÁGINA
+=================================== */
+
+.resourcesPage {
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+/* ===================================
+   HERO
+=================================== */
+
+.resourcesHero {
+    background: white;
+    text-align: center;
+    padding: 70px 8%;
+}
+
+.heroBadge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.resourcesHero h1 {
+    color: #0F4C81;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.resourcesHero p {
+    max-width: 700px;
+    margin: auto;
+    color: #64748b;
+    line-height: 1.8;
+}
+
+/* ===================================
+   PESQUISA
+=================================== */
+
+.searchSection {
+    padding: 60px 8% 30px;
+}
+
+.searchCard {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.searchCard h2 {
+    color: #0F4C81;
+    margin-bottom: 25px;
+}
+
+.searchGrid {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 20px;
+}
+
+.searchGrid input {
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.searchGrid input:focus {
+    outline: none;
+    border-color: #0F4C81;
+}
+
+.searchGrid button {
+    border: none;
+    border-radius: 12px;
+    background: #0F4C81;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.searchGrid button:hover {
+    background: #1565a8;
+}
+
+/* ===================================
+   FILTROS
+=================================== */
+
+.filtersSection {
+    padding: 20px 8%;
+}
+
+.filtersSection h2 {
+    color: #0F4C81;
+    margin-bottom: 25px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filters button {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: white;
+    color: #0F4C81;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.filters button:hover {
+    background: #0F4C81;
+    color: white;
+}
+
+/* ===================================
+   MAPA
+=================================== */
+
+.mapSection {
+    padding: 40px 8%;
+}
+
+.mapPlaceholder {
+    background: white;
+    border: 3px dashed #cbd5e1;
+    border-radius: 20px;
+    padding: 80px;
+    text-align: center;
+}
+
+.mapPlaceholder h2 {
+    color: #0F4C81;
+    margin: 20px 0;
+}
+
+.mapPlaceholder p {
+    color: #64748b;
+}
+
+/* ===================================
+   RESULTADOS
+=================================== */
+
+.resultsSection {
+    padding: 20px 8% 70px;
+}
+
+.resultsSection h2 {
+    color: #0F4C81;
+    margin-bottom: 30px;
+}
+
+.resultsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.resourceCard {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.resourceCard:hover {
+    transform: translateY(-6px);
+}
+
+.resourceCard h3 {
+    color: #0F4C81;
+    margin-bottom: 20px;
+}
+
+.resourceCard p {
+    margin-bottom: 12px;
+    color: #475569;
+}
+
+.resourceCard button {
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    background: #16a34a;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.resourceCard button:hover {
+    background: #15803d;
+}
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 768px) {
+
+    .searchGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .resourcesHero {
+        padding: 50px 6%;
+    }
+
+    .searchSection,
+    .filtersSection,
+    .mapSection,
+    .resultsSection {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .mapPlaceholder {
+        padding: 45px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .resourcesHero h1 {
+        font-size: 2rem;
+    }
+}
+
+.resourcesPage {
+    min-height: 100vh;
+    background: #fbf8f1;
+    color: #33231e;
+}
+
+.resourcesHero {
+    padding: 54px 22px 30px;
+    background: #fbf8f1;
+    text-align: center;
+}
+
+.heroBadge {
+    padding: 6px 10px;
+    border: 1px solid #e7d7cb;
+    border-radius: 4px;
+    background: #f7eee8;
+    color: #8f4b37;
+    font-size: 12px;
+}
+
+.resourcesHero h1 {
+    margin: 14px 0 10px;
+    color: #33231e;
+    font-size: 34px;
+}
+
+.resourcesHero p {
+    max-width: 680px;
+    color: #65564e;
+    line-height: 1.6;
+}
+
+.searchSection,
+.filtersSection,
+.resourceLayout {
+    width: min(100% - 44px, 1160px);
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.searchSection {
+    padding-top: 16px;
+    padding-bottom: 22px;
+}
+
+.searchCard {
+    padding: 20px;
+    border: 1px solid #eee4da;
+    border-radius: 8px;
+    background: #fffdf9;
+    box-shadow: 0 5px 16px rgba(53, 35, 28, 0.04);
+}
+
+.searchCard label {
+    display: block;
+    margin-bottom: 9px;
+    color: #493b35;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.searchGrid {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+}
+
+.searchGrid input {
+    min-height: 44px;
+    padding: 10px 13px;
+    border-color: #d8cbc0;
+    border-radius: 5px;
+    color: #33231e;
+    box-sizing: border-box;
+}
+
+.searchGrid input:focus {
+    border-color: #ad5941;
+    box-shadow: 0 0 0 3px rgba(173, 89, 65, 0.14);
+}
+
+.searchGrid button {
+    min-height: 44px;
+    padding: 0 17px;
+    border-radius: 5px;
+    background: #ad5941;
+}
+
+.searchGrid button:hover {
+    background: #914632;
+}
+
+.filtersSection {
+    padding-top: 6px;
+    padding-bottom: 24px;
+}
+
+.filtersSection h2,
+.resultsSection h2 {
+    margin: 0 0 14px;
+    color: #33231e;
+    font-size: 19px;
+}
+
+.locationControl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin: 0 0 14px;
+}
+
+.locationButton {
+    min-height: 38px;
+    padding: 0 13px;
+    border: 1px solid #537a67;
+    border-radius: 5px;
+    background: #537a67;
+    color: #fffdf9;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.locationButton:hover:not(:disabled) {
+    background: #3f6452;
+}
+
+.locationButton:disabled {
+    cursor: progress;
+    opacity: 0.75;
+}
+
+.locationPrivacy,
+.locationMessage,
+.locationError {
+    flex-basis: 100%;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.locationPrivacy,
+.locationMessage {
+    color: #65564e;
+}
+
+.locationError {
+    color: #8b2f24;
+}
+
+.filters {
+    gap: 8px;
+}
+
+.filters button {
+    min-height: 36px;
+    padding: 0 12px;
+    border: 1px solid #e4d8ce;
+    border-radius: 5px;
+    background: #fffdf9;
+    color: #65564e;
+    box-shadow: none;
+}
+
+.filters button:hover,
+.filters button.filterActive {
+    border-color: #ad5941;
+    background: #ad5941;
+    color: #fffaf5;
+}
+
+.resourceLayout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.95fr);
+    align-items: start;
+    gap: 22px;
+    padding-bottom: 58px;
+}
+
+.resultsSection {
+    min-width: 0;
+    padding: 0;
+}
+
+.resultsGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+}
+
+.resourceCard,
+.emptyState {
+    padding: 18px;
+    border: 1px solid #eee4da;
+    border-radius: 8px;
+    background: #fffdf9;
+    box-shadow: none;
+}
+
+.resourceCard:hover {
+    transform: none;
+}
+
+.resourceCategory {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #914632;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.resourceCard h3,
+.emptyState h3 {
+    margin: 0 0 10px;
+    color: #33231e;
+    font-size: 17px;
+}
+
+.resourceCard p,
+.emptyState p {
+    margin: 0 0 8px;
+    color: #65564e;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.resourceCard .distance {
+    color: #537a67;
+    font-weight: 600;
+}
+
+.resourceCard a {
+    display: inline-block;
+    margin: 4px 12px 0 0;
+    color: #914632;
+    font-size: 14px;
+    text-underline-offset: 3px;
+}
+
+.emptyState {
+    padding: 28px 20px;
+}
+
+.mapSection {
+    position: sticky;
+    top: 18px;
+    padding: 0;
+}
+
+.mapPlaceholder {
+    display: flex;
+    min-height: 390px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    border: 1px solid #e4d8ce;
+    border-radius: 8px;
+    background-color: #f5efe7;
+    background-image: linear-gradient(45deg, rgba(139, 117, 99, 0.06) 25%, transparent 25%, transparent 75%, rgba(139, 117, 99, 0.06) 75%), linear-gradient(45deg, rgba(139, 117, 99, 0.06) 25%, transparent 25%, transparent 75%, rgba(139, 117, 99, 0.06) 75%);
+    background-position: 0 0, 12px 12px;
+    background-size: 24px 24px;
+    text-align: center;
+}
+
+.mapPlaceholder > span {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border: 1px solid #d9c8b9;
+    border-radius: 50%;
+    background: #fbf8f1;
+    color: #914632;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.mapPlaceholder h2 {
+    margin: 16px 0 8px;
+    color: #33231e;
+    font-size: 18px;
+}
+
+.mapPlaceholder p {
+    max-width: 310px;
+    margin: 0;
+    color: #65564e;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.resourcesPage :focus-visible {
+    outline: 3px solid #c77a5f;
+    outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .resourcesHero {
+        padding: 44px 18px 24px;
+    }
+
+    .resourcesHero h1 {
+        font-size: 30px;
+    }
+
+    .searchSection,
+    .filtersSection,
+    .resourceLayout {
+        width: min(100% - 32px, 1160px);
+    }
+
+    .resourceLayout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .mapSection {
+        position: static;
+        grid-row: 1;
+    }
+
+    .mapPlaceholder {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .searchGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .searchGrid button {
+        width: 100%;
+    }
+}
+
+.mapHeading {
+    margin: 0 0 12px;
+    color: #33231e;
+    font-size: 19px;
+}
+
+.mapCanvas {
+    width: 100%;
+    height: 430px;
+    border: 1px solid #e4d8ce;
+    border-radius: 8px;
+    background: #f5efe7;
+}
+
+.mapNotice {
+    margin: 10px 0 0;
+    color: #65564e;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.mapMarkerWrapper {
+    border: 0;
+    background: transparent;
+}
+
+.mapMarker {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #ad5941;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 760px) {
+    .mapCanvas {
+        height: 340px;
+    }
+}

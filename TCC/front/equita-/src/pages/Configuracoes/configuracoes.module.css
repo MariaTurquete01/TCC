@@ -1,0 +1,368 @@
+.configuracoesPage {
+    min-height: 100vh;
+    background: #f8fafc;
+}
+ 
+ 
+/* HERO */
+ 
+.configuracoesHero {
+    background: white;
+ 
+    padding: 70px 8%;
+ 
+    text-align: center;
+}
+ 
+.heroBadge {
+    display: inline-block;
+ 
+    padding: 8px 18px;
+ 
+    border-radius: 30px;
+ 
+    background: #e0f2fe;
+ 
+    color: #0369a1;
+ 
+    font-weight: 600;
+}
+ 
+.configuracoesHero h1 {
+    color: #0F4C81;
+ 
+    font-size: 2.7rem;
+ 
+    margin: 20px 0 15px;
+}
+ 
+.configuracoesHero p {
+    max-width: 700px;
+ 
+    margin: auto;
+ 
+    color: #64748b;
+ 
+    line-height: 1.8;
+}
+ 
+ 
+/* CONTEÚDO */
+ 
+.configuracoesContent {
+    padding: 50px 8% 80px;
+}
+ 
+.configuracoesCard {
+    max-width: 850px;
+ 
+    margin: 0 auto;
+ 
+    background: white;
+ 
+    border-radius: 20px;
+ 
+    padding: 40px;
+ 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+ 
+ 
+/* SEÇÕES */
+ 
+.configSection {
+    padding-bottom: 30px;
+ 
+    margin-bottom: 30px;
+ 
+    border-bottom: 1px solid #edf0f4;
+}
+ 
+.configSection:last-of-type {
+    margin-bottom: 0;
+}
+ 
+.configSection h2 {
+    color: #0F4C81;
+ 
+    margin: 0 0 8px;
+}
+ 
+.configSection > p {
+    color: #64748b;
+ 
+    margin-bottom: 25px;
+ 
+    line-height: 1.6;
+}
+ 
+ 
+/* ITEM */
+ 
+.configItem {
+    padding: 16px;
+ 
+    background: #f8fafc;
+ 
+    border-radius: 12px;
+}
+ 
+.configItem strong {
+    display: block;
+ 
+    color: #333;
+ 
+    margin-bottom: 6px;
+}
+ 
+.configItem span {
+    color: #64748b;
+ 
+    font-size: 14px;
+}
+ 
+ 
+/* NOTIFICAÇÕES */
+ 
+.toggleItem {
+    display: flex;
+ 
+    align-items: center;
+ 
+    justify-content: space-between;
+ 
+    gap: 25px;
+ 
+    padding: 16px;
+ 
+    background: #f8fafc;
+ 
+    border-radius: 12px;
+ 
+    cursor: pointer;
+}
+ 
+.toggleItem strong {
+    display: block;
+ 
+    color: #333;
+ 
+    margin-bottom: 6px;
+}
+ 
+.toggleItem span {
+    display: block;
+ 
+    color: #64748b;
+ 
+    font-size: 14px;
+ 
+    line-height: 1.5;
+}
+ 
+.toggleItem input {
+    width: 20px;
+    height: 20px;
+ 
+    cursor: pointer;
+ 
+    accent-color: #155EEF;
+}
+ 
+ 
+/* BOTÃO */
+ 
+.formActions {
+    display: flex;
+ 
+    justify-content: flex-end;
+ 
+    margin-top: 30px;
+}
+ 
+.saveButton {
+    border: none;
+ 
+    background: #155EEF;
+ 
+    color: white;
+ 
+    padding: 13px 24px;
+ 
+    border-radius: 10px;
+ 
+    font-weight: 600;
+ 
+    cursor: pointer;
+ 
+    transition: 0.3s;
+}
+ 
+.saveButton:hover {
+    background: #0f4bc4;
+ 
+    transform: translateY(-2px);
+}
+ 
+ 
+/* RESPONSIVIDADE */
+ 
+@media (max-width: 768px) {
+ 
+    .configuracoesHero {
+        padding: 55px 6%;
+    }
+ 
+    .configuracoesHero h1 {
+        font-size: 2.2rem;
+    }
+ 
+    .configuracoesContent {
+        padding: 40px 6% 60px;
+    }
+ 
+    .configuracoesCard {
+        padding: 30px 25px;
+    }
+ 
+    .toggleItem {
+        align-items: flex-start;
+    }
+ 
+}
+ 
+ 
+@media (max-width: 480px) {
+ 
+    .configuracoesHero h1 {
+        font-size: 1.9rem;
+    }
+ 
+    .configuracoesCard {
+        padding: 25px 20px;
+    }
+ 
+    .formActions {
+        justify-content: stretch;
+    }
+ 
+    .saveButton {
+        width: 100%;
+    }
+ 
+}
+
+.configuracoesPage {
+    background: var(--color-background);
+}
+
+.configuracoesHero {
+    padding: 52px 22px 28px;
+    background: var(--color-background);
+}
+
+.heroBadge {
+    padding: 6px 10px;
+    border: 1px solid #e7d7cb;
+    border-radius: var(--radius-control);
+    background: var(--color-surface-soft);
+    color: var(--color-accent-strong);
+    font-size: 12px;
+}
+
+.configuracoesHero h1,
+.configSection h2 {
+    color: var(--color-text);
+}
+
+.configuracoesHero p,
+.configSection > p,
+.configItem span,
+.toggleItem span {
+    color: var(--color-text-muted);
+}
+
+.configuracoesContent {
+    padding: 24px 22px 58px;
+}
+
+.configuracoesCard {
+    max-width: 760px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.configSection {
+    border-color: var(--color-border);
+}
+
+.configItem,
+.toggleItem {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    background: var(--color-background);
+}
+
+.configItem strong,
+.toggleItem strong {
+    color: var(--color-text);
+}
+
+.toggleItem input {
+    accent-color: var(--color-accent);
+}
+
+.saveButton {
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: var(--radius-control);
+    background: var(--color-accent);
+}
+
+.saveButton:hover {
+    background: var(--color-accent-strong);
+    transform: none;
+}
+
+.feedbackMessage,
+.errorMessage {
+    margin: 0 auto 0 0;
+    align-self: center;
+    font-size: 13px;
+}
+
+.feedbackMessage {
+    color: #356744;
+}
+
+.errorMessage {
+    color: #8b3f35;
+}
+ 
+/* ALTERAR SENHA */
+
+.passwordCard {
+    margin-bottom: 30px;
+}
+
+.passwordField {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.passwordField label {
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.passwordField input {
+    padding: 12px 14px;
+    border: 1px solid #d8dee6;
+    border-radius: 10px;
+    font: inherit;
+}

@@ -1,0 +1,489 @@
+
+/* =====================================
+   LOGIN
+===================================== */
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f8fafc;
+}
+
+
+/* =====================================
+   BANNER
+===================================== */
+
+.login-banner {
+    background: linear-gradient(135deg, #0F4C81, #1B75BC);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+}
+
+.login-badge {
+    width: max-content;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .15);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.login-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.login-banner p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 520px;
+}
+
+.login-banner img {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 50px;
+    align-self: center;
+}
+
+
+/* =====================================
+   FORMULÁRIO
+===================================== */
+
+.login-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 470px;
+    background: white;
+    border-radius: 22px;
+    padding: 45px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+}
+
+.login-card h2 {
+    color: #0F4C81;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    color: #64748b;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   INPUTS
+===================================== */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.input-group input {
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.input-group input:focus {
+    border-color: #0F4C81;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(15, 76, 129, .15);
+}
+
+
+/* =====================================
+   SENHA
+===================================== */
+
+.password-input {
+    display: flex;
+}
+
+.password-input input {
+    flex: 1;
+    border-radius: 12px 0 0 12px;
+}
+
+.password-input button {
+    border: none;
+    background: #0F4C81;
+    color: white;
+    padding: 0 20px;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.password-input button:hover {
+    background: #1565a8;
+}
+
+
+/* =====================================
+   OPÇÕES
+===================================== */
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: .95rem;
+}
+
+.login-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    cursor: pointer;
+}
+
+.login-options input {
+    cursor: pointer;
+}
+
+.login-options a {
+    color: #0F4C81;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.login-options a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   BOTÃO ENTRAR
+===================================== */
+
+.login-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #0F4C81;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-button:hover {
+    background: #1565a8;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   DIVISOR
+===================================== */
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #cbd5e1;
+}
+
+.divider span {
+    padding: 0 15px;
+}
+
+
+/* =====================================
+   BOTÃO CADASTRO
+===================================== */
+
+.register-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    border: 2px solid #0F4C81;
+    border-radius: 12px;
+    color: #0F4C81;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.register-button:hover {
+    background: #0F4C81;
+    color: white;
+}
+
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 992px) {
+
+    .login-page {
+        grid-template-columns: 1fr;
+    }
+
+    .login-banner {
+        display: none;
+    }
+
+    .login-form-section {
+        padding: 40px 20px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .login-card {
+        padding: 35px 25px;
+    }
+
+    .login-options {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .login-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .password-input {
+        flex-direction: column;
+    }
+
+    .password-input input {
+        border-radius: 12px;
+    }
+
+    .password-input button {
+        border-radius: 12px;
+        margin-top: 10px;
+        padding: 14px;
+    }
+
+}
+
+.login-page {
+    min-height: 60vh;
+    grid-template-columns: minmax(0, 1fr);
+    background: #fbf8f1;
+}
+
+.login-form-section {
+    grid-column: 1 / -1;
+    align-items: flex-start;
+    padding: 48px 20px 58px;
+}
+
+.login-card {
+    max-width: 440px;
+    padding: 30px;
+    border: 1px solid #eee4da;
+    border-radius: 8px;
+    background: #fffdf9;
+    box-shadow: 0 8px 24px rgba(53, 35, 28, 0.06);
+}
+
+.login-badge {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 14px;
+    padding: 6px 10px;
+    border: 1px solid #e7d7cb;
+    border-radius: 4px;
+    background: #f7eee8;
+    color: #8f4b37;
+    font-size: 12px;
+}
+
+.login-card h1 {
+    margin: 0 0 8px;
+    color: #33231e;
+    font-size: 28px;
+}
+
+.login-card > p {
+    margin: 0 0 24px;
+    color: #65564e;
+    font-size: 14px;
+}
+
+.login-card > .serviceNotice {
+    margin: -8px 0 20px;
+    padding: 10px 12px;
+    border-left: 3px solid #ad5941;
+    background: #f7eee8;
+    color: #65564e;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    color: #493b35;
+    font-size: 14px;
+}
+
+.input-group input {
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #d8cbc0;
+    border-radius: 5px;
+    color: #33231e;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #ad5941;
+    box-shadow: 0 0 0 3px rgba(173, 89, 65, 0.14);
+}
+
+.password-input {
+    display: flex;
+    flex-direction: row;
+}
+
+.password-input input {
+    min-width: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.password-input button {
+    flex: 0 0 auto;
+    border: 1px solid #d8cbc0;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+    background: #f7eee8;
+    color: #914632;
+    font-size: 13px;
+}
+
+.password-input button:hover {
+    background: #efdfd4;
+}
+
+.login-options {
+    justify-content: flex-start;
+    margin: 0 0 20px;
+    font-size: 13px;
+}
+
+.recoveryUnavailable {
+    color: #76685f;
+}
+
+.login-button {
+    min-height: 46px;
+    padding: 11px 16px;
+    border-radius: 5px;
+    background: #ad5941;
+}
+
+.login-button:hover {
+    background: #914632;
+    transform: none;
+}
+
+.feedbackMessage {
+    margin: 0 0 14px !important;
+    padding: 11px 12px;
+    border: 1px solid #ead8cc;
+    border-radius: 5px;
+    background: #f7eee8;
+    color: #65564e !important;
+    font-size: 13px;
+}
+
+.divider {
+    margin: 20px 0;
+    color: #76685f;
+    font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+    background: #e4d8ce;
+}
+
+.register-button {
+    min-height: 44px;
+    padding: 11px;
+    border: 1px solid #ad5941;
+    border-radius: 5px;
+    color: #914632;
+    box-sizing: border-box;
+}
+
+.register-button:hover {
+    background: #f7eee8;
+    color: #914632;
+}
+
+.login-page :focus-visible {
+    outline: 3px solid #c77a5f;
+    outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    .login-form-section {
+        padding: 34px 16px 44px;
+    }
+
+    .login-card {
+        padding: 23px 18px;
+    }
+
+    .password-input {
+        flex-direction: row;
+    }
+}

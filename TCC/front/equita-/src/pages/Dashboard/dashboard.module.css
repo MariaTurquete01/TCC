@@ -1,0 +1,714 @@
+/* ===================================
+   DASHBOARD
+=================================== */
+
+.dashboard-page {
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+
+/* ===================================
+   HERO
+=================================== */
+
+.dashboard-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 70px 8%;
+    background: white;
+}
+
+.dashboard-badge {
+    display: inline-block;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.dashboard-hero h1 {
+    color: #0F4C81;
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+}
+
+.dashboard-hero p {
+    color: #64748b;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.dashboard-search {
+    width: 350px;
+}
+
+.dashboard-search input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.dashboard-search input:focus {
+    outline: none;
+    border-color: #0F4C81;
+    box-shadow: 0 0 0 3px rgba(15, 76, 129, .15);
+}
+
+
+/* ===================================
+   SEÇÕES
+=================================== */
+
+.services-section,
+.activity-section,
+.quick-section {
+    padding: 70px 8%;
+}
+
+.services-section h2,
+.activity-section h2,
+.quick-section h2 {
+    color: #0F4C81;
+    margin-bottom: 35px;
+}
+
+
+/* ===================================
+   SERVIÇOS
+=================================== */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(15, 76, 129, .15);
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+    background: #e0f2fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #0F4C81;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+
+/* ===================================
+   ATIVIDADES
+=================================== */
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
+    text-align: center;
+    transition: .3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-6px);
+}
+
+.activity-card h3 {
+    color: #0F4C81;
+    margin-bottom: 20px;
+}
+
+.activity-card span {
+    display: block;
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: 10px;
+}
+
+.activity-card p {
+    color: #64748b;
+}
+
+
+/* ===================================
+   ACESSO RÁPIDO
+=================================== */
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.quick-card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    text-decoration: none;
+    color: #0F4C81;
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
+    transition: .3s;
+}
+
+.quick-card:hover {
+    background: #0F4C81;
+    color: white;
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(15, 76, 129, .18);
+}
+
+
+/* ===================================
+   ANIMAÇÕES
+=================================== */
+
+.service-card,
+.activity-card,
+.quick-card {
+    transition: all .3s ease;
+}
+
+
+/* ===================================
+   ACESSIBILIDADE
+=================================== */
+
+input:focus,
+button:focus,
+a:focus {
+    outline: 3px solid rgba(15, 76, 129, .25);
+    outline-offset: 3px;
+}
+
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 992px) {
+
+    .dashboard-hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-search {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .dashboard-hero {
+        padding: 50px 6%;
+    }
+
+    .services-section,
+    .activity-section,
+    .quick-section {
+        padding: 50px 6%;
+    }
+
+    .dashboard-hero h1 {
+        font-size: 2.2rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .dashboard-hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .service-card,
+    .activity-card,
+    .quick-card {
+        padding: 22px;
+    }
+
+}
+
+.dashboard-page {
+    min-height: 65vh;
+    background: #fbf8f1;
+    color: #33231e;
+}
+
+.admin-header {
+    padding: 46px 22px 26px;
+    text-align: center;
+}
+
+.dashboard-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 10px;
+    border: 1px solid #e7d7cb;
+    border-radius: 4px;
+    background: #f7eee8;
+    color: #8f4b37;
+    font-size: 12px;
+}
+
+.admin-header h1 {
+    margin: 0 0 9px;
+    color: #33231e;
+    font-size: 32px;
+}
+
+.admin-header > p {
+    margin: 0 auto 12px;
+    color: #65564e;
+    line-height: 1.5;
+}
+
+.admin-header .prototype-notice {
+    max-width: 740px;
+    margin-top: 18px;
+    padding: 11px 14px;
+    border-left: 3px solid #ad5941;
+    background: #f7eee8;
+    color: #65564e;
+    font-size: 13px;
+    text-align: left;
+}
+
+.admin-content {
+    width: min(100% - 44px, 1120px);
+    margin: 0 auto;
+    padding-bottom: 58px;
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 4px;
+    padding-bottom: 0;
+    border-bottom: 1px solid #e4d8ce;
+}
+
+.admin-tabs button {
+    min-height: 44px;
+    padding: 0 17px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: #65564e;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.admin-tabs button:hover {
+    color: #914632;
+}
+
+.admin-tabs .admin-tab-active {
+    border-bottom-color: #ad5941;
+    color: #914632;
+    font-weight: 600;
+}
+
+.admin-panel {
+    min-height: 300px;
+    padding: 24px 0;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.panel-heading h2,
+.admin-empty h2,
+.admin-empty h3 {
+    margin: 0 0 6px;
+    color: #33231e;
+    font-size: 20px;
+}
+
+.panel-heading p,
+.admin-empty p {
+    margin: 0;
+    color: #65564e;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.panel-heading > span {
+    color: #76685f;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.request-list {
+    display: grid;
+    gap: 12px;
+}
+
+.request-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    padding: 18px;
+    border: 1px solid #eee4da;
+    border-radius: 8px;
+    background: #fffdf9;
+}
+
+.request-details {
+    min-width: 0;
+}
+
+.request-category {
+    color: #914632;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.request-details h3 {
+    margin: 6px 0;
+    color: #33231e;
+    font-size: 17px;
+}
+
+.request-details p {
+    margin: 0 0 8px;
+    color: #65564e;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.request-details small {
+    color: #76685f;
+}
+
+.lesson-review-list {
+    display: grid;
+    gap: 10px;
+    margin: 14px 0 0;
+    padding-left: 22px;
+    color: #493b35;
+}
+
+.lesson-review-list li {
+    padding-left: 3px;
+}
+
+.lesson-review-list strong {
+    color: #33231e;
+    font-size: 14px;
+}
+
+.lesson-review-list p {
+    margin: 4px 0;
+    color: #65564e;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.lesson-review-list a {
+    color: #914632;
+    font-size: 13px;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+.volunteer-document-list {
+    margin: -4px 0 12px;
+    padding-left: 20px;
+    color: #65564e;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.request-actions {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 8px;
+}
+
+.request-actions button {
+    min-height: 38px;
+    padding: 0 13px;
+    border: 1px solid #ad5941;
+    border-radius: 5px;
+    background: #ad5941;
+    color: #fffaf5;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.request-actions button:hover:not(:disabled) {
+    background: #914632;
+}
+
+.request-actions button:disabled {
+    border-color: #e4d8ce;
+    background: #f4eee7;
+    color: #76685f;
+    cursor: default;
+}
+
+.request-actions .reject-button {
+    border-color: #d8cbc0;
+    background: transparent;
+    color: #65564e;
+}
+
+.request-actions .reject-button:hover:not(:disabled) {
+    border-color: #ad5941;
+    background: #f7eee8;
+    color: #914632;
+}
+
+.admin-empty {
+    padding: 28px 20px;
+    border: 1px solid #eee4da;
+    border-radius: 8px;
+    background: #fffdf9;
+}
+
+.institution-form {
+    margin-bottom: 22px;
+    padding: 20px;
+    border: 1px solid #eee4da;
+    border-radius: 8px;
+    background: #fffdf9;
+}
+
+.institution-form h3 {
+    margin: 0 0 16px;
+    color: #33231e;
+    font-size: 17px;
+}
+
+.institution-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.institution-field {
+    display: grid;
+    gap: 6px;
+    color: #51433c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.institution-field input,
+.institution-field select,
+.institution-field textarea {
+    width: 100%;
+    min-height: 40px;
+    padding: 9px 10px;
+    border: 1px solid #d8cbc0;
+    border-radius: 5px;
+    background: #fff;
+    color: #33231e;
+    font: inherit;
+    font-weight: 400;
+}
+
+.institution-field textarea {
+    resize: vertical;
+}
+
+.institution-field-wide {
+    grid-column: 1 / -1;
+}
+
+.institution-active {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #51433c;
+    font-size: 14px;
+}
+
+.institution-active input {
+    width: 17px;
+    height: 17px;
+    accent-color: #914632;
+}
+
+.institution-form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 17px;
+}
+
+.institution-form-actions button {
+    min-height: 40px;
+    padding: 0 14px;
+    border: 1px solid #ad5941;
+    border-radius: 5px;
+    background: #ad5941;
+    color: #fffaf5;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.institution-form-actions .cancel-button {
+    border-color: #d8cbc0;
+    background: transparent;
+    color: #65564e;
+}
+
+.storage-note {
+    margin: 16px 0 0;
+    color: #76685f;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.report-status-field {
+    display: grid;
+    min-width: min(100%, 210px);
+    gap: 6px;
+    color: #51433c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.report-status-field select {
+    min-height: 40px;
+    padding: 8px 10px;
+    border: 1px solid #d8cbc0;
+    border-radius: 5px;
+    background: #fff;
+    color: #33231e;
+    font: inherit;
+    font-weight: 400;
+}
+
+.admin-feedback,
+.admin-error {
+    margin: 0 0 16px;
+    padding: 11px 13px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.admin-feedback {
+    border: 1px solid #c6dfcc;
+    background: #edf6ef;
+    color: #356744;
+}
+
+.admin-error {
+    border: 1px solid #e7ceca;
+    background: #f9efed;
+    color: #8b3f35;
+}
+
+.dashboard-page :focus-visible {
+    outline: 3px solid #c77a5f;
+    outline-offset: 3px;
+}
+
+@media (max-width: 680px) {
+    .admin-header {
+        padding: 38px 18px 22px;
+    }
+
+    .admin-header h1 {
+        font-size: 28px;
+    }
+
+    .admin-content {
+        width: min(100% - 32px, 1120px);
+    }
+
+    .admin-tabs {
+        overflow-x: auto;
+    }
+
+    .admin-tabs button {
+        padding: 0 12px;
+        white-space: nowrap;
+    }
+
+    .panel-heading,
+    .request-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .institution-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .institution-field-wide {
+        grid-column: auto;
+    }
+
+    .institution-form {
+        padding: 16px;
+    }
+
+    .request-actions {
+        width: 100%;
+    }
+
+    .request-actions button {
+        flex: 1;
+    }
+}
+
+ 

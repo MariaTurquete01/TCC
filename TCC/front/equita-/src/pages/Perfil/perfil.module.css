@@ -1,0 +1,307 @@
+.perfilPage {
+    min-height: 100vh;
+    background: #f8fafc;
+}
+ 
+ 
+/* HERO */
+ 
+.perfilHero {
+    background: white;
+ 
+    padding: 70px 8%;
+ 
+    text-align: center;
+}
+ 
+.heroBadge {
+    display: inline-block;
+ 
+    padding: 8px 18px;
+ 
+    border-radius: 30px;
+ 
+    background: #e0f2fe;
+ 
+    color: #0369a1;
+ 
+    font-weight: 600;
+}
+ 
+.perfilHero h1 {
+    color: #0F4C81;
+ 
+    font-size: 2.7rem;
+ 
+    margin: 20px 0 15px;
+}
+ 
+.perfilHero p {
+    max-width: 700px;
+ 
+    margin: auto;
+ 
+    color: #64748b;
+ 
+    line-height: 1.8;
+}
+ 
+ 
+/* CONTEÚDO */
+ 
+.perfilContent {
+    padding: 50px 8% 80px;
+}
+ 
+.perfilCard {
+    max-width: 850px;
+ 
+    margin: 0 auto;
+ 
+    background: white;
+ 
+    border-radius: 20px;
+ 
+    padding: 40px;
+ 
+    display: flex;
+ 
+    align-items: flex-start;
+ 
+    gap: 40px;
+ 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+ 
+ 
+/* FOTO */
+ 
+.perfilFoto {
+    width: 110px;
+    height: 110px;
+ 
+    flex-shrink: 0;
+ 
+    display: flex;
+ 
+    align-items: center;
+    justify-content: center;
+ 
+    background: #eef4ff;
+ 
+    border-radius: 50%;
+ 
+    font-size: 48px;
+}
+ 
+ 
+/* INFORMAÇÕES */
+ 
+.perfilInfo {
+    flex: 1;
+}
+ 
+.perfilInfo h2 {
+    color: #0F4C81;
+ 
+    margin: 0 0 25px;
+}
+ 
+.infoItem {
+    padding: 15px 0;
+ 
+    border-bottom: 1px solid #edf0f4;
+}
+ 
+.infoItem:last-child {
+    border-bottom: none;
+}
+ 
+.infoItem span {
+    display: block;
+ 
+    color: #64748b;
+ 
+    font-size: 14px;
+ 
+    margin-bottom: 6px;
+}
+ 
+.infoItem strong {
+    color: #333;
+ 
+    font-size: 16px;
+}
+ 
+ 
+/* RESPONSIVIDADE */
+ 
+@media (max-width: 768px) {
+ 
+    .perfilHero {
+        padding: 55px 6%;
+    }
+ 
+    .perfilHero h1 {
+        font-size: 2.2rem;
+    }
+ 
+    .perfilContent {
+        padding: 40px 6% 60px;
+    }
+ 
+    .perfilCard {
+        flex-direction: column;
+ 
+        align-items: center;
+ 
+        text-align: center;
+ 
+        padding: 30px 25px;
+ 
+        gap: 25px;
+    }
+ 
+    .perfilInfo {
+        width: 100%;
+    }
+ 
+    .infoItem {
+        text-align: left;
+    }
+ 
+}
+ 
+ 
+@media (max-width: 480px) {
+ 
+    .perfilHero h1 {
+        font-size: 1.9rem;
+    }
+ 
+    .perfilCard {
+        padding: 25px 20px;
+    }
+ 
+}
+
+.perfilPage {
+    background: var(--color-background);
+}
+
+.perfilHero {
+    padding: 52px 22px 28px;
+    background: var(--color-background);
+}
+
+.heroBadge {
+    padding: 6px 10px;
+    border: 1px solid #e7d7cb;
+    border-radius: var(--radius-control);
+    background: var(--color-surface-soft);
+    color: var(--color-accent-strong);
+    font-size: 12px;
+}
+
+.perfilHero h1,
+.perfilInfo h2 {
+    color: var(--color-text);
+}
+
+.perfilHero p,
+.infoItem span {
+    color: var(--color-text-muted);
+}
+
+.perfilContent {
+    padding: 24px 22px 58px;
+}
+
+.perfilCard {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.perfilFoto {
+    border-radius: var(--radius-card);
+    background: var(--color-surface-soft);
+}
+
+.infoItem {
+    border-color: var(--color-border);
+}
+
+.infoItem strong {
+    color: var(--color-text);
+}
+
+.profileNotice {
+    width: fit-content;
+    max-width: 680px;
+    margin: 18px auto 0;
+    padding: 10px 13px;
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-surface-soft);
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.infoItem label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.profileInput {
+    width: 100%;
+    min-height: 42px;
+    padding: 9px 11px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    background: var(--color-background);
+    color: var(--color-text);
+    font: inherit;
+}
+
+.profileActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.profileButton,
+.cancelButton {
+    min-height: 42px;
+    padding: 0 15px;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-control);
+    background: var(--color-accent);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancelButton {
+    border-color: var(--color-border);
+    background: transparent;
+    color: var(--color-text);
+}
+
+.feedbackMessage {
+    color: #356744;
+    font-size: 14px;
+}
+
+.errorMessage {
+    color: #8b3f35;
+    font-size: 14px;
+}
+ 
+ 
