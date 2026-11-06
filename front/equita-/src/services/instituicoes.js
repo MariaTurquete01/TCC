@@ -1,7 +1,19 @@
 import { apiGet, apiPost, apiPut } from "./api";
 
-export function carregarInstituicoes() {
-  return apiGet("/instituicoes/all");
+// O banco guarda só o id da categoria (categoriaInstituicaoId).
+// Aqui buscamos também as categorias e acrescentamos o nome dela em "categoria"
+// (ex.: "DELEGACIA"), que é o que a página Recursos usa para filtrar e exibir.
+export async function carregarInstituicoes() {
+  const [instituicoes, categorias] = await Promise.all([
+    apiGet("/instituicoes/all"),
+    apiGet("/categorias-instituicao/all"),
+  ]);
+
+  return (instituicoes || []).map((instituicao) => ({
+    ...instituicao,
+    categoria:
+      (categorias || []).find((categoria) => categoria.id === instituicao.categoriaInstituicaoId)?.nome || null,
+  }));
 }
 
 export function criarInstituicao(instituicao) {

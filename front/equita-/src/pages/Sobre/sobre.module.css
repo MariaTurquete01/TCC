@@ -1,0 +1,206 @@
+.aboutPage {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.aboutHero {
+  padding: 80px 8% 60px;
+  text-align: center;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.aboutHero h1 {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.aboutHero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  background: var(--color-surface-soft);
+  color: var(--color-accent-strong);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.section {
+  padding: 70px 8%;
+}
+
+.sectionSoft {
+  background: var(--color-surface-soft);
+}
+
+.sectionTitle {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.sectionTitle:last-child {
+  margin-bottom: 0;
+}
+
+.section h2 {
+  margin: 0 0 16px;
+  font-size: 2rem;
+}
+
+.section p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.missionCard {
+  padding: 32px;
+  border-radius: var(--radius-card);
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.missionCard h3 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+}
+
+.missionCard p {
+  margin: 0;
+  color: #fff;
+  line-height: 1.7;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.card h3 {
+  margin: 12px 0 8px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.valuesList {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.valuesList li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+}
+
+.valuesList span {
+  color: var(--color-text-muted);
+}
+
+.cta {
+  padding: 70px 8%;
+  text-align: center;
+  background: var(--color-footer);
+  color: #fff;
+}
+
+.cta h2 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.cta p {
+  margin: 0 0 28px;
+  color: #e7ddd6;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 12px 26px;
+  border-radius: var(--radius-control);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primaryBtn {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.primaryBtn:hover {
+  background: var(--color-accent-strong);
+}
+
+.secondaryBtn {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 800px) {
+  .twoColumns {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .section,
+  .aboutHero,
+  .cta {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

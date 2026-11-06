@@ -25,6 +25,8 @@ import SaudeMental from "../pages/Direitos/SaudeMental/SaudeMental";
 import Trabalhistas from "../pages/Direitos/Trabalhistas/Trabalhistas";
 import Recursos from "../pages/Recursos/Recursos";
 import Protocolo from "../pages/Protocolo/Protoclo";
+import Sobre from "../pages/Sobre/Sobre";
+import PainelVoluntario from "../pages/Voluntario/PainelVoluntario";
 import Dashboard from "../pages/Dashboard/Dashoboard";
 import { obterSessao } from "../services/sessao";
 
@@ -49,7 +51,8 @@ function AppRoutes() {
         <Route path="/cursos" element={<Cursos />} />
         <Route path="/cursos/:id" element={<CursoDetalhe />} />
         <Route path="/meus-cursos" element={<ExigirPerfil niveis={["USER", "VOLUNTARIO", "ADMIN"]}><MeusCursos /></ExigirPerfil>} />
-        <Route path="/voluntario/meus-cursos" element={<ExigirPerfil niveis={["VOLUNTARIO"]}><MeusCursos /></ExigirPerfil>} />
+        <Route path="/voluntario/meus-cursos" element={<ExigirPerfil niveis={["VOLUNTARIO"]}><PainelVoluntario /></ExigirPerfil>} />
+        <Route path="/voluntario" element={<Navigate to="/voluntario/meus-cursos" replace />} />
         <Route path="/admin" element={<ExigirPerfil niveis={["ADMIN"]}><Dashboard /></ExigirPerfil>} />
         <Route path="/direitos" element={<Direitos />} />
         <Route path="/direitos/assedio" element={<Assedio />} />
@@ -65,7 +68,7 @@ function AppRoutes() {
         <Route path="/direitos/saude-mental" element={<SaudeMental />} />
         <Route path="/direitos/trabalhistas" element={<Trabalhistas />} />
         <Route path="/recursos" element={<Recursos />} />
-        <Route path="/sobre" element={<Protocolo />} />
+        <Route path="/sobre" element={<Sobre />} />
         <Route path="/protocolo" element={<Protocolo />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

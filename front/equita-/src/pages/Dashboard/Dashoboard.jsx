@@ -45,7 +45,7 @@ function formatarDataOcorrencia(data) {
   return dia && mes && ano ? `${dia}/${mes}/${ano}` : String(data);
 }
 const FORMULARIO_INSTITUICAO_VAZIO = {
-  categoria: "",
+  categoriaInstituicaoId: "",
   nome: "",
   descricao: "",
   endereco: "",
@@ -59,6 +59,13 @@ const FORMULARIO_INSTITUICAO_VAZIO = {
   longitude: "",
   ativa: true,
 };
+
+// "ASSISTENCIA_SOCIAL" → "Assistencia social"
+function nomeCategoria(nome) {
+  if (!nome) return "Sem categoria";
+  const texto = nome.replaceAll("_", " ").toLowerCase();
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
 
 function obterLinkHttpSeguro(link) {
   if (typeof link !== "string" || !link.trim()) return null;
@@ -77,6 +84,7 @@ function Dashboard() {
   const [solicitacoesVoluntario, setSolicitacoesVoluntario] = useState([]);
   const [cursos, setCursos] = useState([]);
   const [instituicoes, setInstituicoes] = useState([]);
+  const [categoriasInstituicao, setCategoriasInstituicao] = useState([]);
   const [denuncias, setDenuncias] = useState([]);
   const [usuarios, setUsuarios] = useState([]);
   const [direitos, setDireitos] = useState([]);
@@ -136,16 +144,18 @@ function Dashboard() {
   }
 
   async function recarregarTudo() {
-    const [, , listaInstituicoes, listaDenuncias, listaUsuarios, listaDireitos] = await Promise.all([
+    const [, , listaInstituicoes, listaCategorias, listaDenuncias, listaUsuarios, listaDireitos] = await Promise.all([
       recarregarSolicitacoes(),
       recarregarCursos(),
       carregarInstituicoes(),
+      apiGet("/categorias-instituicao/all"),
       apiGet("/denuncias/all"),
       apiGet("/usuarios/all"),
       apiGet("/direitos/all"),
     ]);
 
     setInstituicoes(listaInstituicoes);
+    setCategoriasInstituicao(listaCategorias || []);
     setDenuncias(listaDenuncias);
     setUsuarios(listaUsuarios);
     setDireitos(listaDireitos);
@@ -318,6 +328,11 @@ function Dashboard() {
       endereco: formularioInstituicao.endereco.trim(),
       cidade: formularioInstituicao.cidade.trim(),
       estado: formularioInstituicao.estado.trim().toUpperCase(),
+      // a API espera o id da categoria (tabela CategoriasInstituicao)
+      categoriaInstituicaoId: Number(formularioInstituicao.categoriaInstituicaoId),
+      // campo vazio vira null (o banco aceita coordenadas nulas)
+      latitude: possuiLatitude ? Number(formularioInstituicao.latitude) : null,
+      longitude: possuiLongitude ? Number(formularioInstituicao.longitude) : null,
     };
 
     setErro("");
@@ -344,6 +359,12 @@ function Dashboard() {
     setFormularioInstituicao({
       ...FORMULARIO_INSTITUICAO_VAZIO,
       ...instituicao,
+      categoriaInstituicaoId: instituicao.categoriaInstituicaoId ?? "",
+      descricao: instituicao.descricao ?? "",
+      cep: instituicao.cep ?? "",
+      telefone: instituicao.telefone ?? "",
+      email: instituicao.email ?? "",
+      horarioFuncionamento: instituicao.horarioFuncionamento ?? "",
       latitude: instituicao.latitude ?? "",
       longitude: instituicao.longitude ?? "",
     });
@@ -622,14 +643,15 @@ function Dashboard() {
                   <div className={styles["institution-form-grid"]}>
                     <label className={styles["institution-field"]} htmlFor="instituicao-categoria">
                       Categoria
-                      <select id="instituicao-categoria" name="categoria" value={formularioInstituicao.categoria} onChange={atualizarFormularioInstituicao} required>
+                      <select id="instituicao-categoria" name="categoriaInstituicaoId" value={formularioInstituicao.categoriaInstituicaoId} onChange={atualizarFormularioInstituicao} required>
                         <option value="">Selecione uma categoria</option>
-                        <option value="DELEGACIA">Delegacia</option>
-                        <option value="ONG">ONG</option>
-                        <option value="ABRIGO">Abrigo</option>
-                        <option value="ASSISTENCIA_SOCIAL">Assistência social</option>
-                        <option value="DEFENSORIA">Defensoria</option>
-                        <option value="CENTRO_DE_APOIO">Centro de apoio</option>
+                        {categoriasInstituicao
+                          .filter((categoria) => categoria.ativo !== false)
+                          .map((categoria) => (
+                            <option key={categoria.id} value={categoria.id}>
+                              {nomeCategoria(categoria.nome)}
+                            </option>
+                          ))}
                       </select>
                     </label>
                     <label className={styles["institution-field"]} htmlFor="instituicao-nome">
@@ -703,7 +725,7 @@ function Dashboard() {
                     {instituicoes.map((instituicao) => (
                       <article className={styles["request-item"]} key={instituicao.id}>
                         <div className={styles["request-details"]}>
-                          <span className={styles["request-category"]}>{instituicao.categoria.replaceAll("_", " ")}</span>
+                          <span className={styles["request-category"]}>{nomeCategoria(categoriasInstituicao.find((categoria) => categoria.id === instituicao.categoriaInstituicaoId)?.nome)}</span>
                           <h3>{instituicao.nome}</h3>
                           <p>{instituicao.endereco}, {instituicao.cidade} - {instituicao.estado}</p>
                           <small>{instituicao.ativa ? "Ativa" : "Inativa"}{instituicao.telefone ? ` · ${instituicao.telefone}` : ""}</small>
