@@ -8,4 +8,14 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  server: {
+    // O front chama "/api/..." e o Vite repassa para a API Java na porta 8080
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        rewrite: (caminho) => caminho.replace(/^\/api/, ''),
+      },
+    },
+  },
 })

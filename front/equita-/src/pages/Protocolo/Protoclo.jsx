@@ -57,10 +57,45 @@ function Protocolo() {
   }
 
   // consulta automática quando a página abre com ?numero=...
-  useEffect(() => {
-    if (protocoloInicial) consultar(protocoloInicial);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [protocoloInicial]);
+  // Consulta automática quando a página abre com ?numero=...
+useEffect(() => {
+  if (!protocoloInicial) return;
+
+  // Evita consultar protocolos com formato inválido.
+  if (!FORMATO_PROTOCOLO.test(protocoloInicial)) return;
+
+  let ativo = true;
+
+  async function buscarProtocolo() {
+    try {
+      const encontrada = await apiGet(
+        `/denuncias/protocolo/${encodeURIComponent(protocoloInicial)}`
+      );
+
+      if (ativo) {
+        setDenuncia(encontrada);
+        setErro("");
+      }
+    } catch (excecao) {
+      if (ativo) {
+        setDenuncia(null);
+        setErro(
+          excecao.status === 0
+            ? excecao.message
+            : "Protocolo não encontrado. Confira o número informado."
+        );
+      }
+    }
+  }
+
+  buscarProtocolo();
+
+  return () => {
+    ativo = false;
+  };
+}, [protocoloInicial]);
+
+
 
   function handleSubmit(event) {
     event.preventDefault();
